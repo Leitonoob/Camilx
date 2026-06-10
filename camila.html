@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuestra Historia ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Georgia', serif;
+   background: linear-gradient(135deg,#0a2342,#1e3c72,#2a5298);
+    overflow:hidden;
+    color:white;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+audio{
+    position:absolute;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:300px;
+    z-index:1000;
+}
+/* Fondo animado */
+body::before{
+    content:"";
+    position:absolute;
+    width:200%;
+    height:200%;
+    background:
+    radial-gradient(circle, rgba(255,255,255,0.18) 1px, transparent 1px);
+    background-size:40px 40px;
+    animation:moverFondo 25s linear infinite;
+}
+
+@keyframes moverFondo{
+    from{transform:translate(0,0);}
+    to{transform:translate(-100px,-100px);}
+}
+
+.container{
+    width:100%;
+    max-width:none;
+    text-align:center;
+}
+
+h1{
+    font-family: 'Lobster', cursive;
+    font-size: 5rem;
+    color: white;
+
+    text-shadow:
+        3px 3px 0px #000,
+        6px 6px 0px #000,
+        9px 9px 15px rgba(0,0,0,.4);
+
+    letter-spacing: 2px;
+}
+
+.sub{
+    font-size:1.1rem;
+    margin-bottom:30px;
+    opacity:.95;
+}
+
+.counter{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.counter{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.counter{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.box{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:#2b2b2b;
+    border:4px solid #444;
+    border-top:4px solid #ff003c;
+    box-shadow:
+        inset 0 0 10px rgba(0,0,0,.7),
+        0 0 15px rgba(255,0,60,.5);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.box::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    background:linear-gradient(
+        to bottom,
+        rgba(255,255,255,.15),
+        transparent
+    );
+}
+
+.number{
+    font-size:2rem;
+    font-weight:bold;
+    color:white;
+    z-index:1;
+}
+
+.label{
+    font-size:.75rem;
+    color:#ddd;
+    text-transform:uppercase;
+    z-index:1;
+}
+.message{
+    margin-top:35px;
+    line-height:1.8;
+    font-size:1.05rem;
+    text-shadow:0 0 10px rgba(0,0,0,.3);
+max-width: 1000px;
+margin: 35px auto 0 auto;
+}
+
+/* Corazones flotando */
+
+.heart{
+text-shadow:
+0 0 5px rgba(255,255,255,0.6),
+0 0 10px rgba(255,255,255,0.5),
+0 0 20px rgba(255,255,255,0.3);
+    position:absolute;
+      color: rgba(255,255,255,0.85);
+    animation:float linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(110vh);
+        opacity:0;
+    }
+    20%{
+        opacity:1;
+    }
+    to{
+        transform:translateY(-20vh);
+        opacity:0;
+    }
+}
+
+@media(max-width:600px){
+  h1{
+    font-family: 'Lobster', cursive;
+    font-size: 70px;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+    margin: 20px 0;
+}
+</style>
+</head>
+<body>
+
+<audio id="musica" controls loop>
+    <source src="cancion.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+    <h1>TE AMO CAMILA❤️ </h1>
+
+<br>
+
+    <div class="sub">
+        Cada segundo contigo hace que todo valga la pena.
+    </div>
+
+    <div class="counter">
+        <div class="box">
+            <div id="days" class="number">0</div>
+            <div class="label">Días</div>
+        </div>
+
+        <div class="box">
+            <div id="hours" class="number">0</div>
+            <div class="label">Horas</div>
+        </div>
+
+        <div class="box">
+            <div id="minutes" class="number">0</div>
+            <div class="label">Minutos</div>
+        </div>
+
+        <div class="box">
+            <div id="seconds" class="number">0</div>
+            <div class="label">Segundos</div>
+        </div>
+    </div>
+
+    <div class="message">
+        Desde que empezamos a conocernos y a conectar de verdad, me di cuenta de que eres una persona muy especial para mí. Me gustan muchas cosas de ti: tus ojitos, tu forma de ser, tu personalidad y hasta esos pequeños detalles que te hacen única.<br>
+
+<br>
+Sé que a veces no nos entendemos del todo, porque seguimos conociéndonos y aprendiendo el uno del otro, pero quiero que siempre tengas claro algo: el cariño que te tengo es completamente sincero. Y aunque aún estamos construyendo nuestra historia, estoy seguro de que no me equivoqué al escogerte.<br>
+
+Me gustas muchísimo, Camila. No tienes idea de lo feliz que me hace hablar contigo y de las ganas que tengo cada semana de poder verte, aunque sea por un momento, para que seamos solo tú y yo. Haría lo que estuviera en mis manos por estar a tu lado y compartir más momentos contigo.<br>
+
+<br>
+Tengo la sensación de que lo nuestro va por buen camino. Tal vez todavía estamos escribiendo los primeros capítulos de esta historia, pero confío en que puede funcionar porque cada día me gustas más. Y si algo tengo claro, es que no sabes lo loco que me tienes pensando en ti y esperando el momento de volver a verte.<br>
+        Gracias por cada sonrisa, cada recuerdo y cada instante.
+        ❤️
+    </div>
+
+</div>
+
+<script>
+
+// FECHA ESPECIAL
+const startDate = new Date("2026-06-12T19:30:00");
+
+function updateCounter(){
+
+    const now = new Date();
+    const diff = now - startDate;
+
+    const days = Math.floor(diff / (1000*60*60*24));
+
+    const hours =
+    Math.floor(diff/(1000*60*60)) % 24;
+
+    const minutes =
+    Math.floor(diff/(1000*60)) % 60;
+
+    const seconds =
+    Math.floor(diff/1000) % 60;
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+}
+
+setInterval(updateCounter,1000);
+updateCounter();
+
+
+// Corazones flotando
+
+function createHeart(){
+
+    const heart = document.createElement("div");
+
+    heart.classList.add("heart");
+    heart.innerHTML = "❤";
+
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.fontSize = (10 + Math.random()*20) + "px";
+    heart.style.animationDuration = (8 + Math.random()*10) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },18000);
+}
+
+setInterval(createHeart,500);
+
+</script>
+
+</body>
+</html>
